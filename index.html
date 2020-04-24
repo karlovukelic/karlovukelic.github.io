@@ -8,8 +8,11 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="theme-color" content="#f0f0f0">
 		
-		<title>quotes</title>
+		<link href="data:image/x-icon;base64,AAABAAIAAAAAAAEAIAAyAwAAJgAAACgoAAABACAAcwAAAFgDAACJUE5HDQoaCgAAAA1JSERSAAABAAAAAQAIBgAAAFxyqGYAAAL5SURBVHja7dQBAQAwDMOgz7/oXkhABLftAU0nAOgSAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAg7AO/bP4fHJWr/wAAAABJRU5ErkJggolQTkcNChoKAAAADUlIRFIAAAAoAAAAKAgGAAAAjP64bQAAADpJREFUeNrtzjEBADAMA6DVv+hUxI70AAVMknfZCAoKCgoKCgoKCl4mKNgmKNgmKNgmKNgmKNgm+GsBmQp3sQsWGhgAAAAASUVORK5CYII=" rel="icon" type="image/icon" />
+		
+		<title>Quotes</title>
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		
@@ -91,6 +94,22 @@
 				color: #707070;
 				font-size: .8em;
 				font-weight: 700;
+			}
+			
+			#sidebar-wrapper .search .query {
+				border: 0;
+				outline: 0;
+				padding: 0;
+				font-family: inherit;
+				font-size: inherit;
+				letter-spacing: inherit;
+				background-color: transparent;
+			}
+			
+			#sidebar-wrapper .search .query {
+				font-weight: 700;
+				color: #707070;
+				caret-color: #707070;
 			}
 			
 			nav.navbar {
@@ -216,6 +235,12 @@
 					<a href="/tagged/hrvatski" class="list-group-item list-group-item-action">Croatian quotes</a>
 					<a href="/author" class="list-group-item list-group-item-action">Sort by author</a>
 					<a href="/work" class="list-group-item list-group-item-action">Sort by work</a>
+					
+					<div class="list-title" style="margin-top: 2em;">
+						<form action="/search" method="get" class="search">
+            				<input type="text" name="q" value="" class="query" placeholder="SEARCH">
+        				</form>
+					</div>
 					
 				</div>
 			</div>
