@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.images, .videos {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5em;
+}
+
+.images img {
+	max-width: 20vw;
+}

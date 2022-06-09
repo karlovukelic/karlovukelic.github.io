@@ -1,464 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-
-
-
-	<head>
+<!doctype html>
+<html>
 	
+	<head>
+		
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="theme-color" content="#f0f0f0">
+		<meta name="robots" content="noindex">
+		<title>Moja stranica</title>
 		
-		<link href="data:image/x-icon;base64,AAABAAIAAAAAAAEAIAAyAwAAJgAAACgoAAABACAAcwAAAFgDAACJUE5HDQoaCgAAAA1JSERSAAABAAAAAQAIBgAAAFxyqGYAAAL5SURBVHja7dQBAQAwDMOgz7/oXkhABLftAU0nAOgSAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAgTAAQJgAIEwCECQDCBABhAoAwAUCYACBMABAmAAgTAIQJAMIEAGECgDABQJgAIEwAECYACBMAhAkAwgQAYQKAMAFAmAAg7AO/bP4fHJWr/wAAAABJRU5ErkJggolQTkcNChoKAAAADUlIRFIAAAAoAAAAKAgGAAAAjP64bQAAADpJREFUeNrtzjEBADAMA6DVv+hUxI70AAVMknfZCAoKCgoKCgoKCl4mKNgmKNgmKNgmKNgmKNgm+GsBmQp3sQsWGhgAAAAASUVORK5CYII=" rel="icon" type="image/icon" />
-		
-		<!--title>Quotes</title-->
-		
-		<!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		
-		<link href="site/css/sidebar.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet"-->
-		
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-		
-		<style>
-			body {
-				font-family: roboto, arial, sans-serif;
-				background: #f0f0f0;
-				font-size: 13px;
-			}
-			
-			::selection {
-				background: #303030;
-				color: white;
-			}
-			
-			-moz-::selection {
-				background: #303030;
-				color: white;
-			}
-			
-			/* sidebar */
-			#sidebar-wrapper {
-				font-size: 12px;
-				display: flex;
-				user-select: none;
-				position: fixed;
-				width: 240px;
-				font-family: open sans, roboto, arial, sans-serif;
-				z-index: 9;
-			}
-			
-			#sidebar-wrapper, #sidebar-wrapper .list-group .list-group-item-action/*, #menu-toggle*/ {
-				background: #303030;
-			}
-			
-			#menu-toggle {
-				background: none;
-			}
-			
-			#menu-toggle {
-				fill: #a9a9a9;
-				transform: fill .25s ease-out;
-			}
-			
-			#menu-toggle.toggled {
-				fill: #303030;
-			}
-			
-			#menu-toggle.toggled:hover {
-				background: #f0f0f0;
-			}
-			
-			#sidebar-wrapper .list-group .list-group-item-action, #menu-toggle {
-				color: darkgray;
-				transition: background .2s ease;
-			}
-			
-			#sidebar-wrapper .list-group .list-group-item-action:hover, #menu-toggle:hover {
-				background: #505050;
-			}
-			
-			#sidebar-wrapper .list-group .list-group-item {
-				border: 0;
-			}
-			
-			#sidebar-wrapper .list-group .list-title {
-				padding-left: 1rem;
-				padding-bottom: .5em;
-				color: #707070;
-				font-size: .8em;
-				font-weight: 700;
-			}
-			
-			#sidebar-wrapper .search .query {
-				border: 0;
-				outline: 0;
-				padding: 0;
-				font-family: inherit;
-				font-size: inherit;
-				letter-spacing: inherit;
-				background-color: transparent;
-			}
-			
-			#sidebar-wrapper .search .query {
-				font-weight: 700;
-				color: #707070;
-				caret-color: #707070;
-			}
-			
-			nav.navbar {
-				position: fixed;
-				left: -10px;
-				z-index: 99;
-			}
-			
-			.navbar .btn-primary:focus, .navbar .btn-primary:not(:disabled):not(.disabled):active:focus {
-				box-shadow: none;
-			}
-			
-			/* posts */
-			@media(max-width:1185px) {
-				#wrapper .card-columns {
-					column-count: 2;
-				}
-				
-				.card-link+.card-link {
-					margin-left: .5rem;
-				}
-			}
-			
-			@media(min-width:1186px) {
-				.card-link+.card-link {
-					margin-left: .5rem;
-				}
-			}
-			
-			@media(max-width:900px) {
-				#wrapper .card-columns {
-					column-count: 1;
-				}
-			}
-			
-			@media(max-width:768px) {
-				.container-fluid {
-					padding-left: 0!important;
-					padding-top: 30px;
-				}
-				
-				#wrapper .card-columns {
-					column-count: 2;
-				}
-				
-				#menu-toggle {
-					fill: #303030;
-				}
-				
-				#menu-toggle:hover {
-					fill: #303030;
-					background: #ffffff;
-				}
-				
-				#menu-toggle.toggled {
-					fill: #a9a9a9;
-				}
-
-				#menu-toggle.toggled:hover {
-					background: #505050;
-				}
-			}
-			
-			@media(max-width:600px) {
-				#wrapper .card-columns {
-					column-count: 1;
-				}
-			}
-			
-			#wrapper .card-columns .card {
-				background: white;
-				border: 1px solid #606060;
-				padding: 3rem;
-				border-radius: .5rem;
-				color: #303030;
-			}
-			
-			.container-fluid {
-				padding-right: 0;
-			}
-			
-			.container-fluid.toggled {
-				padding-left: 0!important;
-				padding-top: 30px;
-			}
-			
-			#wrapper .card-columns .card .tags {
-				margin-top: 2rem;
-				padding-top: .5rem;
-				border-top: 1px solid #606060;
-				font-size: .8em;
-			}
-			
-			#wrapper .card-columns .card .tags a {
-				color: #303030;
-			}
-			
-			#wrapper .card-columns .card .tags a::after {
-				content: "\003B";
-			}
-		</style>
+		<link href="site/css/main.css" rel="stylesheet" />
+		<link href="site/img/favicon.png" rel="icon" type="image/png" />
 		
 	</head>
 	
 	
+	
 	<body>
 		
-		<div class="d-flex" id="wrapper">
+		<header>
+			<div>Digitalni multimedij</div>
+			<div style="margin-top: -.3em">9.6.2022.</div>
+		</header>
 		
-			<div id="sidebar-wrapper">
-				<!--div class="sidebar-heading">Quotes</div-->
-				<div class="list-group list-group-flush align-self-center"> <!-- class align-self-center to center -->
-					
-					<!--div class="list-title">BASIC</div>
-					<a href="/" class="list-group-item list-group-item-action">Home</a>
-					<a href="/about" class="list-group-item list-group-item-action">About</a>
-					<a href="/ask" class="list-group-item list-group-item-action">Contact</a>
-					<a href="https://kngermanotta.tumblr.com" class="list-group-item list-group-item-action">Main blog</a>
+		<h1>Karlo Vukelić</h1>
+		<h2>Vježba 10</h2>
 		
-					<div class="list-title" style="margin-top: 2em;">FILTER</div>
-					<a href="/random" class="list-group-item list-group-item-action">Random post</a>
-					<a href="/tagged/english" class="list-group-item list-group-item-action">English quotes</a>
-					<a href="/tagged/hrvatski" class="list-group-item list-group-item-action">Croatian quotes</a>
-					<a href="/author" class="list-group-item list-group-item-action">Sort by author</a>
-					<a href="/work" class="list-group-item list-group-item-action">Sort by work</a>
-					
-					<div class="list-title" style="margin-top: 2em;">
-						<form action="/search" method="get" class="search">
-            				<input type="text" name="q" value="" class="query" placeholder="SEARCH">
-        				</form>
-					</div-->
-					
-				</div>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="about.html">Još sadržaja</a></li>
+				<li><a href="https://instagram.com/peptidnivez">Moj Instagram</a></li>
+				<li><a href="site/docs/dokument.pdf">Jako bitan dokument</a></li>
+			</ul>
+		</nav>
+		
+		
+		<main>
+			<div style="margin: 0 20vw 10vh;">
+				<p><b>O meni &middot;&nbsp;</b> Zovem se Karlo. Prezivam se Vukelić. Rođen sam u Rijeci (vozilo hitne bilo je zaglavilo u povorci povodom Riječkog karnevala, mislim da je to simbolično). Živim u Senju te studiram na Grafičkom fakultetu u Zagrebu. Najdraža pjesma Vesne Pisarović trenutnp mi je <i>Godine prolaze</i>, a najdraži stih Jelene Rozge mi je:</p>
+				<blockquote>&bdquo;Burek i tople krafne<br/>Za sve što noću rade<br/>I noćare&rdquo;</blockquote>
 			</div>
-	
-		<div id="page-content-wrapper">
 			
-	 		<nav class="navbar navbar-expand-lg">
-				<button class="btn btn-primary" id="menu-toggle" style="padding: .375rem; border: 0; border-radius: 100%;">
-					<!--svg x="0px" y="0px" width="30px" height="30px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
-						<line fill="none" stroke="#a9a9a9" stroke-width="2" stroke-miterlimit="10" x1="12" y1="21" x2="52" y2="21"/>
-						<line fill="none" stroke="#a9a9a9" stroke-width="2" stroke-miterlimit="10" x1="12" y1="33" x2="52" y2="33"/>
-						<line fill="none" stroke="#a9a9a9" stroke-width="2" stroke-miterlimit="10" x1="12" y1="45" x2="52" y2="45"/>
-					</svg-->
-					<svg width="32" height="32" viewBox="0 0 32 32">
-						<path d="M28 9.6h-24c-0.442 0-0.8-0.358-0.8-0.8s0.358-0.8 0.8-0.8h24c0.442 0 0.8 0.358 0.8 0.8s-0.358 0.8-0.8 0.8zM28 17.6h-24c-0.442 0-0.8-0.358-0.8-0.8s0.358-0.8 0.8-0.8h24c0.442 0 0.8 0.358 0.8 0.8s-0.358 0.8-0.8 0.8zM28 25.6h-24c-0.442 0-0.8-0.358-0.8-0.8s0.358-0.8 0.8-0.8h24c0.442 0 0.8 0.358 0.8 0.8s-0.358 0.8-0.8 0.8z"></path>
-					</svg>
-				</button>
-				
-				<!--button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button-->
-	  		</nav>
-
-			<!--div class="container-fluid" style="padding-left: 250px; transition: all .5s ease;">
-	  			
-				
-				<div class="card-columns" style="padding: 2rem;">
-				
-				
-					<div class="card">
-						<div class="card-block">
-						<p>P.S. We are not written for one instrument alone; I am not, neither are you.</p>
-						<div class="tags">
-							<a href="#" class="card-link">andre aciman</a>
-							<a href="#" class="card-link">english</a>
-							<a href="#" class="card-link">call me by your name</a>
-						</div>
-					</div>
+			<div class="split">
+				<div>
+					<b>Najslušaniji albumi u posljednjih 30 dana</b>
+					<ol>
+						<li>Preacher's Daughter - Ethel Cain (157x)</li>
+						<li>Sunshine Factory - Uffie (97x)</li>
+						<li>CRASH - Charli XCX (89x)</li>
+						<li>Begin To Hope - Regina Spektor (74x)</li>
+						<li>MOTOMAMI - Rosalía (70x)</li>
+						<li>Hounds of Love - Kate Bush (42x)</li>
+						<li>X - Kylie Minogue (42x)</li>
+						<li>Blue Banisters - Lana Del Rey (39x)</li>
+						<li>Pang - Caroline Polachek (36x)</li>
+						<li>Miley Cyrus &amp; Her Dead Petz - Miley Cyrus (35x)</li>
+					</ol>
 				</div>
 				
-				<div class="card">
-					<div class="card-block">
-						<p>Ljudi promatraju boje dana samo na njegovu početku i kraju, no meni je sasvim očito da se dan pretapa kroz mnoštvo nijansi i intonacija, sa svakim novim trenutkom.</p><p>Jedan jedini sat može se sastojati od tisuća različitih boja.</p><p>Voštano žutih, oblacima popljuvanih plavih. Tmurnih tmina.</p><p>S obzirom na svoj posao, svjesno se trudim da ih primijetim.</p>
-						<div class="tags">
-							<a href="#" class="card-link">markus zusak</a>
-							<a href="#" class="card-link">hrvatski</a>
-							<a href="#" class="card-link">kradljivica knjiga</a>
-						</div>
-					</div>
-				</div>
-			
-				<div class="card">
-					<div class="card-block">
-						<p>This is what we call love. When you are loved, you can do anything in creation. When you are loved, there’s  no need at all to understand what’s happening, because everything happens within you, and even men can turn themselves into the wind. As long as the wind helps, of course.</p>
-						<div class="tags">
-							<a href="#" class="card-link">paulo coehlo</a>
-							<a href="#" class="card-link">english</a>
-							<a href="#" class="card-link">the alchemist</a>
-						</div>
-					</div>
+				<div>
+					<b>Najdraže pjesme svih vremena</b>
+					<ul>
+						<li>The Pleasure Principle - Janet Jackson</li>
+						<li>Missing U - Robyn</li>
+						<li>MacArthur Park Suite - Donna Summer</li>
+						<li>Running Up That Hill (A Deal With God) - Kate Bush</li>
+						<li>Track 10 - Charli XCX</li>
+						<li>Ribs - Lorde</li>
+						<li>Soba 23 - Denis &amp; Denis</li>
+						<li>Sea At Night - GFOTY</li>
+						<li>Heavy Metal Lover - Lady Gaga</li>
+						<li>Teenage Dream - Katy Perry</li>
+					</ul>
 				</div>
 				
-				<div class="card">
-					<div class="card-block">
-						<p>Ali htio sam reći da najčešće čovjek ne zna što ga najviše zanima sve dok ne počne govoriti o nečemu što ga ne zanima najviše.</p>
-						<div class="tags">
-							<a href="#" class="card-link">j d salinger</a>
-							<a href="#" class="card-link">english</a>
-							<a href="#" class="card-link">lovac u žitu</a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card-block">
-						<p>Bio sam već umoran od njezina uzrujavanja a ni zbog čeka. Od toga kako bi se najednom smrknula i počela aludirati na izluđujuće opresivnu težinu tragedije ili čega li već, a da nikad ne bi rekla što to nije u redu, nikad navela ijedan prokleti razlog za svoju tugu. A ja eto mislim da moraš imati nekakav razlog. Cura me znogirala, pa sam tužan. Uhvatili su me kako pušim, pa sam spižđen. Boli me srce, pa sam sav nikakav. Ali, Buco, ona nikad za to nije imala nikakav razlog. Bio sam naprosto već preumoran od stalnog baktanja s tim njezinim dramama. I zato sam je pustio da ode. Isuse.</p>
-						<div class="tags">
-							<a href="#" class="card-link">john green</a>
-							<a href="#" class="card-link">hrvatski</a>
-							<a href="#" class="card-link">u traganju za alaskom</a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card-block">
-						<p>Everyone seems to have a clear idea of how other people should lead their lives, but none about his or her own.</p>
-						<div class="tags">
-							<a href="#" class="card-link">paulo coehlo</a>
-							<a href="#" class="card-link">english</a>
-							<a href="#" class="card-link">the alchemist</a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card-block">
-						<p>Nije tako loše kad sja Sunce, ali Sunce sja samo kad mu se prohtije.</p>
-						<div class="tags">
-							<a href="#" class="card-link">j d salinger</a>
-							<a href="#" class="card-link">english</a>
-							<a href="#" class="card-link">lovac u žitu</a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card-block">
-						<p>Isn’t it funny the way you fantasize about junk food when you’re a kid? It’s really all-consuming. I guess you have to obsess about something before you know about sex.</p>
-						<div class="tags">
-							<a href="#" class="card-link">becky albertalli</a>
-							<a href="#" class="card-link">english</a>
-							<a href="#" class="card-link">simon vs the homosapiens agenda</a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card-block">
-						<p>They cracked more than his ribs.</p>
-						<div class="tags">
-							<a href="#" class="card-link">benjamin alire saenz</a>
-							<a href="#" class="card-link">aristotle and dante discover the secrets of the universe</a>
-							<a href="#" class="card-link">english</a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card-block">
-						<p>Puno mislim, no ne kazujem puno.</p>
-						<div class="tags">
-							<a href="#" class="card-link">anna frank</a>
-							<a href="#" class="card-link">dnevnik anne frank</a>
-							<a href="#" class="card-link">hrvatski</a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card-block">
-						<p>You can’t eat books, sweetheart.</p>
-						<div class="tags">
-							<a href="#" class="card-link">markus zusak</a>
-							<a href="#" class="card-link">the book thief</a>
-							<a href="#" class="card-link">english</a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card-block">
-						<p>You and me and history, remember?</p>
-						<div class="tags">
-							<a href="#" class="card-link">casey mcquiston</a>
-							<a href="#" class="card-link">red white & royal blue</a>
-							<a href="#" class="card-link">english</a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card-block">
-						<p>“Do you like dogs, Ari?“</p><p>“I love dogs.”</p><p>“Me too. They don’t have to wear shoes.“</p>
-						<div class="tags">
-							<a href="#" class="card-link">benjamin alire saenz</a>
-							<a href="#" class="card-link">aristotle and dante discover the secrets of the universe</a>
-							<a href="#" class="card-link">english</a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card-block">
-						<p>The phrase “see attached bibliography” is the single sexiest thing you have ever written to me.</p>
-						<div class="tags">
-							<a href="#" class="card-link">casey mcquiston</a>
-							<a href="#" class="card-link">red white & royal blue</a>
-							<a href="#" class="card-link">english</a>
-						</div>
-					</div>
-				</div>
-				
-				
-				</div--> <!-- card-columns -->
-			
-			
-			</div> <!-- container-fluid -->
-		</div> <!-- page-content-wrapper -->
-		
-		</div> <!-- #wrapper -->
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-		
-		<script>
-			$("#menu-toggle").click(function(e) {
-				e.preventDefault();
-				$("#wrapper").toggleClass("toggled"),
-				$(".container-fluid").toggleClass("toggled"),
-				$("#menu-toggle").toggleClass("toggled");
-			});
-		</script>
+			</div>
+		</main>
 		
 	</body>
+	
 </html>
