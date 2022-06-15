@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="robots" content="noindex">
+		<title>Video</title>
+		
+		<link href="site/css/main.css" rel="stylesheet" />
+		<link href="site/css/video.css" rel="stylesheet" />
+		<link href="../site/img/favicon.png" rel="icon" type="image/png" />
+		
+	</head>
+	
+	
+	
+	<body>
+		
+		<header>
+			<div>Digitalni multimedij</div>
+			<div style="margin-top: -.3em" id="date"></div>
+		</header>
+		
+		<h1>Karlo Vukelić</h1>
+		<h2>Vježbe</h2>
+		
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">O meni</a></li>
+				<li><a href="vjezbe.html">Vježbe</a></li>
+				<li><a href="/">Video</a></li>
+			</ul>
+		</nav>
+		
+		
+		<main>
+			
+			<div style="margin: 0 20vw 10vh;">
+				<video src="site/img/video.mp4" controls style="max-width: 60vw;"></video>
+				<h3>Recept za ovaj video:</h3>
+				<div class="split">
+					<div>
+						<h4>Sastojci</h4>
+						<ul>
+							<li>Adobe Premiere<br>(&#126;866.10 kn/godišnje)</li>
+							<li>Adobe Photoshop<br>(&#126;1819.76 kn/godišnje)</li>
+							<li>Svijeća (&#126;8 kn)</li>
+							<li>Čaša (&#126;8 kn)</li>
+							<li>Boca (&#126;47.5 kn)</li>
+							<li>Zdjelica (&#126;5 kn)</li>
+							<li class="total">Ukupno: 2754.36 kn</li>
+						</ul>
+					</div>
+					
+					<div>
+						<h4>Priprema</h4>
+						<ul>
+							<li>Učitati video u Premiere</li>
+							<li>Odabrati početni i završni keyframe koji su međusobno slični</li>
+							<li>Exportati jedan od njih i napraviti masku</li>
+							<li>Učitati masku u Premiere i staviti ju iznad videa</li>
+							<li>Učitati drugi video</li>
+							<li>Dodati efekte (fade in, fade out, speed)</li>
+							<li>Dodati naslove</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			
+		</main>
+		
+		<script>
+
+			var today = new Date();
+
+			var date = today.getDate()+'.'+(today.getMonth()+1)+'.'+today.getFullYear();
+			
+			document.getElementById("date").innerHTML = date;
+
+		</script>
+		
+	</body>
+	
+</html>

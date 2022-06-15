@@ -47,7 +47,7 @@ nav ul {
 	list-style-type: none;
 	display: flex;
 	justify-content: space-between;
-	margin: 10vh 20vw;
+	margin: 10vh 15vw;
 	padding: 0;
 }
 
@@ -82,4 +82,17 @@ blockquote {
 
 .split div {
 	width: 50%;
+}
+
+.blink {
+	animation: blink .4s infinite;
+}
+
+.blink:hover {
+	animation: none;
+}
+
+@keyframes blink {
+	from {opacity: 0;}
+	to {opacity: 100%;}
 }

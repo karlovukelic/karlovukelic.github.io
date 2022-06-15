@@ -19,7 +19,7 @@
 		
 		<header>
 			<div>Digitalni multimedij</div>
-			<div style="margin-top: -.3em">9.6.2022.</div>
+			<div style="margin-top: -.3em" id="date"></div>
 		</header>
 		
 		<h1>Karlo Vukelić</h1>
@@ -53,6 +53,17 @@
 			<h3>Zvuk</h3>
 			<audio src="site/img/audio.mp3" controls></audio>
 		</main>
+		
+		<script>
+
+			var today = new Date();
+
+			var date = today.getDate()+'.'+(today.getMonth()+1)+'.'+today.getFullYear();
+			
+			document.getElementById("date").innerHTML = date;
+
+		</script>
+
 		
 	</body>
 	

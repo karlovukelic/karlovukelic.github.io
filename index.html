@@ -18,7 +18,7 @@
 		
 		<header>
 			<div>Digitalni multimedij</div>
-			<div style="margin-top: -.3em">9.6.2022.</div>
+			<div style="margin-top: -.3em" id="date"></div>
 		</header>
 		
 		<h1>Karlo Vukelić</h1>
@@ -30,13 +30,14 @@
 				<li><a href="about.html">Još sadržaja</a></li>
 				<li><a href="https://instagram.com/peptidnivez">Moj Instagram</a></li>
 				<li><a href="site/docs/dokument.pdf">Jako bitan dokument</a></li>
+				<li><a href="projektni/index.html" class="blink">Projektni zadatak</a></li>
 			</ul>
 		</nav>
 		
 		
 		<main>
 			<div style="margin: 0 20vw 10vh;">
-				<p><b>O meni &middot;&nbsp;</b> Zovem se Karlo. Prezivam se Vukelić. Rođen sam u Rijeci (vozilo hitne bilo je zaglavilo u povorci povodom Riječkog karnevala, mislim da je to simbolično). Živim u Senju te studiram na Grafičkom fakultetu u Zagrebu. Najdraža pjesma Vesne Pisarović trenutnp mi je <i>Godine prolaze</i>, a najdraži stih Jelene Rozge mi je:</p>
+				<p><b>O meni &middot;&nbsp;</b> Zovem se Karlo. Prezivam se Vukelić. Rođen sam u Rijeci (vozilo hitne bilo je zaglavilo u povorci povodom Riječkog karnevala, mislim da je to simbolično). Živim u Senju te studiram na Grafičkom fakultetu u Zagrebu. Najdraža pjesma Vesne Pisarović trenutno mi je <i>Godine prolaze</i>, a najdraži stih Jelene Rozge mi je:</p>
 				<blockquote>&bdquo;Burek i tople krafne<br/>Za sve što noću rade<br/>I noćare&rdquo;</blockquote>
 			</div>
 			
@@ -75,6 +76,16 @@
 				
 			</div>
 		</main>
+		
+		<script>
+
+			var today = new Date();
+
+			var date = today.getDate()+'.'+(today.getMonth()+1)+'.'+today.getFullYear();
+			
+			document.getElementById("date").innerHTML = date;
+
+		</script>
 		
 	</body>
 	

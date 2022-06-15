@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+.dl {
+	display: block;
+	margin-top: 1em;
+}
+
+.dl::before {
+	content: "";
+	display: inline-block;
+	height: 21px;
+	width: 21px;
+	background: url("../img/link.svg");
+	margin-right: .5em;
+}
+
+.projekt::before {
+	content: "";
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background: url("../img/star.svg");
+	margin-right: .5em;
+	margin-bottom: -.2em;
+}
