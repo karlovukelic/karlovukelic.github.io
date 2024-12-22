@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Cycle Background</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: hsl(0, 100%, 50%);
+            transition: background 3s ease;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const colors = [
+            "hsl(0, 100%, 50%)",   // Red
+            "hsl(120, 100%, 50%)", // Green
+            "hsl(240, 100%, 50%)", // Blue
+            "hsl(60, 100%, 50%)",  // Yellow
+            "hsl(300, 100%, 50%)", // Magenta
+            "hsl(180, 100%, 50%)"  // Cyan
+        ];
+        let index = 0;
+
+        function changeBackground() {
+            index = (index + 1) % colors.length;
+            document.body.style.background = colors[index];
+        }
+
+        setInterval(changeBackground, 3000);
+    </script>
+</body>
+</html>
