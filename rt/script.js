@@ -4,12 +4,12 @@ const fruitDescription = document.getElementById('fruit-description');
 const flipSound = document.getElementById('flip-sound');
 
 const fruits = [
-  { name: "Lemon", description: "A sour and tangy citrus fruit.", letter: "L" },
-  { name: "Banana", description: "A long and yellow fruit.", letter: "B" },
-  { name: "Pear", description: "A sweet and juicy fruit with a grainy texture.", letter: "P" },
-  { name: "Grapes", description: "Small, juicy, and often used to make wine.", letter: "G" },
-  { name: "Apple", description: "A sweet and crunchy fruit.", letter: "A" },
-  { name: "Plum", description: "A sweet and slightly tart stone fruit.", letter: "P" }
+  { name: "Lemon", description: "A sour and tangy citrus fruit.", letter: "L", color:"#fff80d" },
+  { name: "Banana", description: "A long and yellow fruit.", letter: "B", color:"#eace00" },
+  { name: "Pear", description: "A sweet and juicy fruit with a grainy texture.", letter: "P", color:"#a7ca00" },
+  { name: "Grapes", description: "Small, juicy, and often used to make wine.", letter: "G", color:"#650082" },
+  { name: "Apple", description: "A sweet and crunchy fruit.", letter: "A", color:"#e81e25" },
+  { name: "Plum", description: "A sweet and slightly tart stone fruit.", letter: "P", color:"#660057" }
 ];
 
 let currentIndex = 0;
@@ -32,6 +32,7 @@ function positionRouletteItems() {
 function updateFruitInfo(index) {
   fruitName.textContent = fruits[index].name;
   fruitDescription.textContent = fruits[index].description;
+  fruitName.style.color = fruits[index].color;
 }
 
 // Highlight the selected letter
