@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Cycle Background</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: hsl(0, 100%, 50%);
-            transition: background 3s ease;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Roulette</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="imgs/lemon.svg">
 </head>
 <body>
-    <script>
-        const colors = [
-            "hsl(0, 100%, 50%)",   // Red
-            "hsl(120, 100%, 50%)", // Green
-            "hsl(240, 100%, 50%)", // Blue
-            "hsl(60, 100%, 50%)",  // Yellow
-            "hsl(300, 100%, 50%)", // Magenta
-            "hsl(180, 100%, 50%)"  // Cyan
-        ];
-        let index = 0;
+  <div class="container">
+    <!-- Left Column -->
+    <div class="left-column">
+      <h1 id="fruit-name">Lemon</h1>
+      <p id="fruit-description">A sour and tangy citrus fruit.</p>
+    </div>
 
-        function changeBackground() {
-            index = (index + 1) % colors.length;
-            document.body.style.background = colors[index];
-        }
+    <!-- Right Column (Circular Roulette) -->
+    <div class="right-column">
+      <div class="roulette">
+        <div class="roulette-item"><img src="imgs/lemon.svg" alt="Lemon"></div>
+        <div class="roulette-item"><img src="imgs/banana.svg" alt="Banana"></div>
+        <div class="roulette-item"><img src="imgs/pear.svg" alt="Pear"></div>
+        <div class="roulette-item"><img src="imgs/grapes.svg" alt="Grapes"></div>
+        <div class="roulette-item"><img src="imgs/apple.svg" alt="Apple"></div>
+        <div class="roulette-item"><img src="imgs/plum.svg" alt="Plum"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="credits">karlo vukelić, računarska tipografija, 2024./2025.</div>
 
-        setInterval(changeBackground, 3000);
-    </script>
+  <audio id="flip-sound" src="flip.mp3"></audio>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,176 @@
+/* General Styles */
+/*@font-face {
+  font-family: 'nhgd';
+  src: url('NHaasGroteskDSPro-55Rg.woff2') format('woff2'),
+      url('NHaasGroteskDSPro-55Rg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}*/
+
+@font-face {
+  font-family: 'nhgdlt';
+  src: url('NHaasGroteskDSPro-35XLt.woff2') format('woff2'),
+      url('NHaasGroteskDSPro-35XLt.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'nhgt';
+  src: url('NHaasGroteskTXPro-55Rg.woff2') format('woff2'),
+      url('NHaasGroteskTXPro-55Rg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+body {
+  font-family: "nhgt", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  text-rendering: geometricPrecision;
+  text-wrap: pretty;
+}
+
+::selection {
+  background-color: #fff80d;
+}
+
+p {
+  margin: 0;
+  max-width: 200px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Left Column */
+.left-column {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.left-column h1 {
+  font-family: "nhgdlt", Arial, Helvetica, sans-serif;
+  font-size: 5em;
+  text-transform: lowercase;
+  letter-spacing: .04em;
+  margin: 0 0 .2em 0;
+}
+
+/*.left-column h1 {
+  font-size: 2.5rem;
+}
+
+.left-column p {
+  font-size: 1.2rem;
+}*/
+
+/* Right Column (Circular Roulette) */
+.right-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.roulette {
+  position: relative;
+  width: 600px; /* Increased size (previously 400px) */
+  height: 600px; /* Increased size (previously 400px) */
+  border-radius: 50%;
+  transform: rotate(-90deg); /* Start with selected fruit at 9 o'clock */
+  transition: transform 0.5s ease-in-out; /* Smooth rotation animation */
+  user-select: none;
+}
+
+.roulette-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 0%;
+  opacity: 0.3; /* Reduced opacity for non-selected fruits */
+  transition: opacity 0.3s ease, transform 0.5s ease-in-out; /* Smooth opacity and rotation */
+  cursor: pointer;
+}
+
+.roulette-item img {
+  width: 80px; /* Keep the SVG size at 80px */
+  height: 80px;
+}
+
+.roulette-item.selected {
+  opacity: 1; /* Full opacity for selected fruit */
+}
+
+.credits {
+  font-size: .8em;
+  position: fixed;
+  top: 97vh;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack columns vertically on small screens */
+    height: auto; /* Allow container to grow with content */
+  }
+
+  .left-column,
+  .right-column {
+    flex: none; /* Reset flex to allow natural height */
+    width: 100%;
+    height: auto;
+  }
+
+  .left-column {
+    order: 2; /* Move description below the roulette */
+    padding: 20px 10px;
+  }
+
+  .right-column {
+    order: 1; /* Move roulette to the top */
+    height: auto; /* Allow height to adjust based on content */
+    min-height: 50vh; /* Ensure enough space for the roulette */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 0; /* Add more padding to prevent cutting off */
+  }
+
+  .roulette {
+    width: 300px; /* Smaller roulette for mobile */
+    height: 300px;
+    margin: 20px 0; /* Add margin to ensure spacing */
+  }
+
+  .roulette-item img {
+    width: 50px; /* Smaller SVGs for mobile */
+    height: 50px;
+  }
+}
