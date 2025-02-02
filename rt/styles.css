@@ -1,13 +1,3 @@
-/* General Styles */
-/*@font-face {
-  font-family: 'nhgd';
-  src: url('NHaasGroteskDSPro-55Rg.woff2') format('woff2'),
-      url('NHaasGroteskDSPro-55Rg.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}*/
-
 @font-face {
   font-family: 'nhgdlt';
   src: url('NHaasGroteskDSPro-35XLt.woff2') format('woff2'),
@@ -81,13 +71,6 @@ p {
   margin: 0 0 .2em 0;
 }
 
-/*.left-column h1 {
-  font-size: 2.5rem;
-}
-
-.left-column p {
-  font-size: 1.2rem;
-}*/
 
 /* Right Column (Circular Roulette) */
 .right-column {
@@ -101,11 +84,11 @@ p {
 
 .roulette {
   position: relative;
-  width: 600px; /* Increased size (previously 400px) */
-  height: 600px; /* Increased size (previously 400px) */
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
-  transform: rotate(-90deg); /* Start with selected fruit at 9 o'clock */
-  transition: transform 0.5s ease-in-out; /* Smooth rotation animation */
+  transform: rotate(-90deg);
+  transition: transform 0.5s ease-in-out;
   user-select: none;
 }
 
@@ -120,7 +103,7 @@ p {
 }
 
 .roulette-item img {
-  width: 80px; /* Keep the SVG size at 80px */
+  width: 80px;
   height: 80px;
 }
 
